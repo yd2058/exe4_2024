@@ -62,6 +62,14 @@ public class Results extends AppCompatActivity implements AdapterView.OnItemLong
 
 
     }
+    /**
+     * creates the context menu.
+     * <p>
+     *
+     * @param	menu Description     refers to the menu created.
+     * @param   v Description        refers to the current activity.
+     * @param   menuInfo Description refers to the menuinfo object of this menu
+     */
 
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
@@ -70,6 +78,15 @@ public class Results extends AppCompatActivity implements AdapterView.OnItemLong
         menu.add("Sn=");
 
     }
+
+    /**
+     * reacts accordingly to the context menu item selected.
+     * <p>
+     *
+     * @param	item Description	refers to item selected in the context menu.
+     * @return	Description			returns the super of this action.
+     */
+
     @Override
     public boolean onContextItemSelected(MenuItem item) {
         tmp = item.getTitle().toString();
@@ -84,10 +101,27 @@ public class Results extends AppCompatActivity implements AdapterView.OnItemLong
         return super.onContextItemSelected(item);
     }
 
+    /**
+     * returns to MainActivity.
+     * <p>
+     *
+     * @param	view Description	refers to current activity.
+     */
 
     public void ret(View view) {
         finish();
     }
+
+    /**
+     * gives the number who is the subject of the question in the context menu.
+     * <p>
+     *
+     * @param	parent Description	refers to the relevant adapter.
+     * @param	view Description	refers to current activity.
+     * @param   position Description refers to list unit selected
+     * @param   id Descrition       refers to the id of the item selected
+     * @return	Description			returns false.
+     */
 
     @Override
     public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
